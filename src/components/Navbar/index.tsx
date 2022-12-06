@@ -13,17 +13,41 @@ export default function Navbar({ setIsDark, isDark }) {
       </div>
 
       <ul className="flex flex-col items-center gap-6 flex-1">
-        <li className="flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]">
+        <li
+          className={
+            isDark
+              ? "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]"
+              : "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#333]"
+          }
+        >
           <AiFillHome className="text-[24px] text-inherit m-[2px]" />
-          <p className="font-semibold text-[14px] text-inherit">Home</p>
+          <p className="font-extrabold text-[14px] text-inherit font-josefin">
+            Home
+          </p>
         </li>
-        <li className="flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]">
+        <li
+          className={
+            isDark
+              ? "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]"
+              : "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#333]"
+          }
+        >
           <BsSearch className="text-[22px] text-inherit m-[2px]" />
-          <p className="font-semibold text-[14px] text-inherit">Search</p>
+          <p className="font-extrabold text-[14px] text-inherit font-josefin">
+            Search
+          </p>
         </li>
-        <li className="flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]">
+        <li
+          className={
+            isDark
+              ? "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#aaa]"
+              : "flex flex-col items-center cursor-pointer text-gray-600 hover:text-[#333]"
+          }
+        >
           <BsFillGearFill className="text-[22px] text-inherit m-[2px]" />
-          <p className="font-semibold text-[14px] text-inherit">Settings</p>
+          <p className="font-extrabold text-[14px] text-inherit font-josefin">
+            Settings
+          </p>
         </li>
       </ul>
 

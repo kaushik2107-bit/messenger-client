@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       helvetica: ["Georgia", "Cambria", "Arial", "sans-serif"],
-      comic: ["Comic Sans Ms", "Arial"],
+      josefin: "Josefin Sans, sans-serif",
     },
   },
   plugins: [require("daisyui")],
