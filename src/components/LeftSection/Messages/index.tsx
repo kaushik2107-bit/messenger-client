@@ -38,7 +38,7 @@ export default function Messages({ isDark }) {
   const [rooms, setRooms] = useState(dumiData);
   const [activeRoom, setActiveRoom] = useState(2);
   return (
-    <div className="w-full p-2 rounded-xl">
+    <div className="w-full p-2 rounded-xl flex flex-col">
       <h3
         className="text-[20px] font-josefin font-bold mx-2"
         style={isDark ? { color: "#ccc" } : { color: "#333" }}
@@ -77,7 +77,7 @@ export default function Messages({ isDark }) {
         </li>
       </ul>
 
-      <div className="w-full h-80 overflow-scroll">
+      <div className="w-full h-[32vh] overflow-scroll">
         {dumiData.map((item, index) => {
           return (
             <div
