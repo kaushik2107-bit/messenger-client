@@ -6,6 +6,7 @@ export default function Textbox({
   message,
   setMessage,
   setIsEmojiVisible,
+  handleSubmit,
 }) {
   return (
     <div
@@ -25,7 +26,7 @@ export default function Textbox({
         onChange={(e) => setMessage(e.target.value)}
         style={isDark ? {} : { background: "#ccc", color: "#444" }}
       />
-      <div className="cursor-pointer">
+      <div className="cursor-pointer" onClick={handleSubmit}>
         <MdSend className="text-[20px] m-2 mr-3 text-blue-700" />
       </div>
     </div>

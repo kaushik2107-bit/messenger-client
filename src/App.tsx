@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Main from "./components/Main/index";
 import LoginScreen from "./components/Login/index";
+import socket from "./socketConfig";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           path="/"
           element={
             localStorage.getItem("messenger") ? (
-              <Main />
+              <Main socket={socket} />
             ) : (
               <Navigate to="/login" />
             )

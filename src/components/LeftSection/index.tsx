@@ -2,7 +2,7 @@ import Search from "./Search/index";
 import Messages from "./Messages/index";
 import Calls from "./Calls/index";
 
-export default function LeftSection({ isDark }) {
+export default function LeftSection({ isDark, chatData, setChatData, socket }) {
   return (
     <div className="flex flex-col h-screen">
       <div
@@ -10,7 +10,12 @@ export default function LeftSection({ isDark }) {
         style={isDark ? { background: "#222" } : { background: "#eee" }}
       >
         <Search isDark={isDark} />
-        <Messages isDark={isDark} />
+        <Messages
+          isDark={isDark}
+          chatData={chatData}
+          setChatData={setChatData}
+          socket={socket}
+        />
       </div>
       <div
         className="w-[280px] flex-1 flex flex-col items-center ml-2 mt-2 rounded-t-xl flex-1"

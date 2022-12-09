@@ -2,8 +2,14 @@ import { useState } from "react";
 export default function Files({ isDark }) {
   const [selected, setSelected] = useState(1);
   return (
-    <div className="flex-1 flex flex-col items-center bg-[#222]">
-      <ul className="w-[90%] m-2 p-[4px] h-[40px] rounded-3xl bg-[#111] flex items-center font-josefin text-[14px]">
+    <div
+      className="flex-1 flex flex-col items-center bg-[#222]"
+      style={isDark ? {} : { background: "#eee" }}
+    >
+      <ul
+        className="w-[90%] m-2 p-[4px] h-[40px] rounded-3xl bg-[#111] flex items-center font-josefin text-[14px]"
+        style={isDark ? {} : { background: "#aaa", color: "#333" }}
+      >
         <li
           className="flex-1 h-full flex justify-center items-center rounded-3xl cursor-pointer"
           onClick={() => setSelected(1)}
